@@ -12,9 +12,38 @@
 		<div class="layui-main">
 			<img src="/assets/images/logo.png" alt="" />
 		</div>
+
 		<!-- 登录注册区域 -->
 		<div class="loginAndRegBox">
 			<div class="title-box"></div>
+
+			<!-- 登录的 div -->
+			<div class="login-box">
+				<form class="layui-form">
+					<div class="layui-form-item">
+						<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" />
+					</div>
+					<div class="layui-form-item">
+						<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" />
+					</div>
+					<div class="layui-form-item">
+						<button class="layui-btn lay-submit layui-btn-fluid">立即提交</button>
+					</div>
+					<div class="layui-form-item">
+						<a href="javascript:;" id="link_reg">去注册账号</a>
+					</div>
+				</form>
+			</div>
+
+			<!-- 注册的 div -->
+			<div class="reg-box">
+				<a href="javascript:;" id="link_login">去登录</a>
+			</div>
 		</div>
+
+		<!-- 导入 jQurey -->
+		<script src="/assets/lib/jquery.js"></script>
+		<!-- 导入自己的js -->
+		<script src="/assets/js/login.js"></script>
 	</body>
 </html>
