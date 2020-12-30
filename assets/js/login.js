@@ -27,4 +27,24 @@ $(function () {
 			}
 		}
 	})
+	// 注册功能,监听注册表单的提交事件
+	const layer = layui.layer
+	$('#form_reg').on('submit', function (e) {
+		e.preventDefault()
+		$.post(
+			'http://ajax.frontend.itheima.net/api/reguser',
+			{
+				username: $('#form_reg [name=username]').val(),
+				password: $('#form_reg [name=password]').val()
+			},
+			function (res) {
+				if (res.status !== 0) {
+					return layer.msg(res.message)
+				}
+				layer.msg('注册成功,请登录!')
+				// 让他自己去点击a标签跳转
+				$('#link_login').click()
+			}
+		)
+	})
 })
