@@ -1,5 +1,5 @@
 $(function () {
-	gitUserInfo()
+	getUserInfo()
 
 	const layer = layui.layer
 	// 点击按钮，实现退出功能
@@ -18,7 +18,7 @@ $(function () {
 	})
 })
 
-function gitUserInfo() {
+function getUserInfo() {
 	$.ajax({
 		method: 'GET',
 		url: '/my/userinfo',
