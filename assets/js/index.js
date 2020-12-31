@@ -7,9 +7,9 @@ function gitUserInfo() {
 		method: 'GET',
     url: '/my/userinfo',
     // 以/my/开头的请求需要加上headers属性
-		headers: {
+		/* headers: {
 			Authorization: localStorage.getItem('token') || ''
-		},
+		}, */
 		success(res) {
 			if (res.status !== 0) {
 				return layui.layer.msg('获取用户信息失败!')
