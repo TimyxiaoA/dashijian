@@ -18,11 +18,15 @@ iframe {
 	overflow: hidden;
 }
 
+a {
+	transition: none !important;
+}
 .userinfo {
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
 	font-size: 12px;
+	/* 不让用户选中 */
 	user-select: none;
 }
 .layui-side-scroll .userinfo {
